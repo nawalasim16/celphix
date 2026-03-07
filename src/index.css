@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 214.3 31.8% 91.4%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Celphix 4-color glowing animation */
+@keyframes cel-color {
+  0% { color: #008613; text-shadow: 0 0 3px rgba(0,134,19,0.45); }
+  25% { color: #ffea00; text-shadow: 0 0 3px rgba(255,234,0,0.45); }
+  50% { color: #008613; text-shadow: 0 0 3px rgba(0,134,19,0.45); }
+  75% { color: #ffea00; text-shadow: 0 0 3px rgba(255,234,0,0.45); }
+  100% { color: #008613; text-shadow: 0 0 3px rgba(0,134,19,0.45); }
+}
+
+@keyframes phix-color {
+  0% { color: #ffea00; text-shadow: 0 0 3px rgba(255,234,0,0.45); }
+  25% { color: #008613; text-shadow: 0 0 3px rgba(0,134,19,0.45); }
+  50% { color: #008613; text-shadow: 0 0 3px rgba(0,134,19,0.45); }
+  75% { color: #ffea00; text-shadow: 0 0 3px rgba(255,234,0,0.45); }
+  100% { color: #ffea00; text-shadow: 0 0 3px rgba(255,234,0,0.45); }
+}
+
+.animate-cel {
+  animation: cel-color 6s infinite;
+}
+
+.animate-phix {
+  animation: phix-color 6s infinite;
+}
+
+.hover-glow-card:hover {
+  box-shadow: 0 0 20px rgba(0, 134, 19, 0.4);
+  border-color: #008613;
+}
+
+/* Skip rendering below-the-fold content until needed to reduce initial work. */
+.defer-render {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 900px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-cel,
+  .animate-phix {
+    animation: none;
+  }
+}

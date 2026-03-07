@@ -1,0 +1,20 @@
+## Pages
+- [Blog | Celphix](/blog): Insights and technical deep-dives into autonomous voice communication.
+- [Celphix - Elite Autonomous Voice Communication | Stop Hiring. Start Celphixing.](/home): Celphix is the elite standard in autonomous voice communication. Replace human inefficiencies with high-fidelity, zero-latency AI agents engineered for absolute precision. 90% cost reduction, 24/7 availability, and instant scalability.
+- [Command Center | Celphix](/commandcenter): Professional-grade outbound operations by Celphix. View our tier classifications and tactical executions.
+- [Digital Receptionist | Celphix](/digitalreceptionist): Your front desk, re-engineered. Professional AI receptionist that never misses a call.
+- [Documentation - Celphix Command Center](/documentationportal): No description available
+- [Documentation & Resources | Command Center](/commandcenterdocumentation): Technical documentation, API references, integration guides, and security compliance for Celphix.
+- [Documentation | Digital Receptionist](/digitalreceptionistdocumentation): Official documentation, guides, and system status for Celphix Digital Receptionist.
+- [Liquid Agent | Celphix](/liquidagent): Performance on demand. Flexible pay-as-you-go AI voice agent at $0.05/min. No contracts, no commitments.
+- [Liquid Agent | Voice Intelligence on Demand](/liquidhome): Deploy elite voice agents in seconds. Pay only for what you use.
+- [Login - Celphix | Elite Autonomous Voice Communication](/login): Login to your Celphix account and access the future of autonomous voice communication.
+- [Mission Capabilities | Command Center](/commandcentermissioncapabilities): Absolute Operational Dominance with Autonomous Voice Infrastructure.
+- [Pricing - Command Center | Celphix](/pricing): No description available
+- [Pricing & Comparison | Command Center](/commandcenterpricing): Full-spectrum operational comparison and deployment pricing.
+- [Pricing & Comparison | Digital Receptionist](/digitalreceptionistpricing): Comparative audit: Human Receptionist vs Celphix AI.
+- [Pricing | Liquid Agent](/liquidpricing): Pay for performance. $0.05/minute usage-based billing.
+- [Services | Command Center](/commandcenterservices): Core Service Verticals and Technical Stack.
+- [Services | Digital Receptionist](/digitalreceptionistservices): Discover the comprehensive capabilities of the Celphix Digital Receptionist.
+- [Services | Liquid Agent](/liquidservices): Capabilities and deployment execution strategies for Liquid Agent.
+- [Sign Up - Celphix | Start Celphixing Today](/signup): Create your Celphix account and experience the elite standard in autonomous voice communication. Stop hiring. Start Celphixing.
