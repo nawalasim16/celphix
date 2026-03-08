@@ -19,9 +19,6 @@ const LiquidHomePage = () => {
         <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#008613_1px,transparent_1px)] [background-size:20px_20px]" />
         
         <div className="relative z-10 text-center max-w-5xl mx-auto">
-          <div className="inline-block mb-6 px-4 py-1.5 bg-[#008613]/10 border border-[#008613]/20 rounded-full text-[#008613] font-mono text-sm font-bold tracking-widest uppercase">
-            Platform Release v2.4
-          </div>
           <h1 className="text-6xl md:text-8xl font-black mb-8 tracking-tighter leading-none">
             Liquid Agent: <br/>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#008613] to-[#0a1a0a]">Voice Intelligence</span> <br/>
