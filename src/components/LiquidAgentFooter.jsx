@@ -64,7 +64,7 @@ const LiquidAgentFooter = () => {
         {/* Bottom Bar */}
         <div className="border-t border-white/20 pt-6">
           <p className="text-white/60 text-sm text-center">
-            © 2025 Celphix.
+            © 2025 Celphix. All Rights Reserved.
           </p>
         </div>
       </div>

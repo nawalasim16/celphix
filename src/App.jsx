@@ -1,6 +1,6 @@
 
-import React, { Suspense } from 'react';
-import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
+import React, { Suspense, useEffect } from 'react';
+import { Route, Routes, BrowserRouter as Router, useLocation } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
 
 const HomePage = React.lazy(() => import('./pages/HomePage'));
@@ -22,9 +22,40 @@ const LiquidServicesPage = React.lazy(() => import('./pages/LiquidServicesPage')
 const LiquidPricingPage = React.lazy(() => import('./pages/LiquidPricingPage'));
 const LiquidDocumentationPage = React.lazy(() => import('./pages/LiquidDocumentationPage'));
 
+const AUTH_ROUTES = new Set(['/login', '/signup']);
+
+function RouteTracker() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (AUTH_ROUTES.has(location.pathname)) {
+      return;
+    }
+
+    const origin = `${location.pathname}${location.search}${location.hash}`;
+    sessionStorage.setItem('celphix:lastOrigin', origin);
+
+    const scrollKey = `celphix:scroll:${origin}`;
+    const persistScroll = () => {
+      sessionStorage.setItem(scrollKey, String(window.scrollY));
+    };
+
+    persistScroll();
+    window.addEventListener('scroll', persistScroll, { passive: true });
+
+    return () => {
+      persistScroll();
+      window.removeEventListener('scroll', persistScroll);
+    };
+  }, [location]);
+
+  return null;
+}
+
 function App() {
   return (
     <Router>
+      <RouteTracker />
       <ScrollToTop />
       <Suspense fallback={<div style={{ minHeight: '100vh' }} />}>
         <Routes>

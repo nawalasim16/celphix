@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/components/ui/use-toast';
 import { Helmet } from 'react-helmet';
 
 const LoginPage = () => {
+  const location = useLocation();
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     email: '',
@@ -62,6 +63,9 @@ const LoginPage = () => {
       description: 'Google authentication is coming soon!',
     });
   };
+
+  const returnTo = location.state?.from || sessionStorage.getItem('celphix:lastOrigin') || '/';
+  const parsedReturnUrl = new URL(returnTo, window.location.origin);
 
   return (
     <>
@@ -175,11 +179,19 @@ const LoginPage = () => {
           <div className="mt-6 text-center">
             <p className="text-gray-600">
               Don't have an account?{' '}
-              <Link to="/signup" className="text-[#008613] font-semibold hover:text-[#ffea00] transition-colors">
+              <Link to="/signup" state={{ from: returnTo }} className="text-[#008613] font-semibold hover:text-[#ffea00] transition-colors">
                 Sign up
               </Link>
             </p>
-            <Link to="/" className="block mt-4 text-[#008613] font-semibold hover:text-[#ffea00] transition-colors">
+            <Link
+              to={{
+                pathname: parsedReturnUrl.pathname,
+                search: parsedReturnUrl.search,
+                hash: parsedReturnUrl.hash,
+              }}
+              state={{ restoreScroll: true }}
+              className="block mt-4 text-[#008613] font-semibold hover:text-[#ffea00] transition-colors"
+            >
               ← Back to Home
             </Link>
           </div>

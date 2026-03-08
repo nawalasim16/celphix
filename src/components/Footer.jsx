@@ -62,7 +62,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-white/20 pt-8">
-          <p className="text-white text-center text-sm">© 2025 Celphix. All rights reserved.</p>
+          <p className="text-white text-center text-sm">© 2025 Celphix. All Rights Reserved.</p>
         </div>
       </div>
     </footer>

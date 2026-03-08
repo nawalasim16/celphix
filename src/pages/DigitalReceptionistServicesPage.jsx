@@ -1,10 +1,13 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import DigitalReceptionistLayout from '@/components/DigitalReceptionistLayout';
+import { Link, useLocation } from 'react-router-dom';
 import { Network, CalendarCheck, ShieldCheck, Mail, Zap, Server, Activity, Database, Briefcase as BriefcaseMedical, Wrench, Scale } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const DigitalReceptionistServicesPage = () => {
+  const location = useLocation();
+
   return (
     <DigitalReceptionistLayout>
       <Helmet>
@@ -150,7 +153,7 @@ const DigitalReceptionistServicesPage = () => {
           </div>
         </div>
       </section>
-
+      
       {/* CTA Section */}
       <section className="py-24 px-4 bg-white text-center">
         <div className="container mx-auto max-w-3xl">
@@ -158,9 +161,16 @@ const DigitalReceptionistServicesPage = () => {
           <p className="text-xl text-gray-700 mb-10">
             A flawless front desk is no longer a luxury. It is a technical guarantee.
           </p>
-          <Button size="lg" className="bg-[#008613] text-white hover:bg-[#ffea00] hover:text-black font-bold text-lg px-12 py-6 h-auto transition-colors duration-300">
-            Deploy My Receptionist
-          </Button>
+          <Link
+            to="/signup"
+            state={{
+              from: `${location.pathname}${location.search}${location.hash}`,
+            }}
+          >
+            <Button size="lg" className="bg-[#008613] text-white hover:bg-[#ffea00] hover:text-black font-bold text-lg px-12 py-6 h-auto transition-colors duration-300">
+              Deploy My Receptionist
+            </Button>
+          </Link>
         </div>
       </section>
     </DigitalReceptionistLayout>

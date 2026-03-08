@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Phone, Calendar, MessageSquare, CheckCircle2, Award, Zap, Clock, Database } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import DigitalReceptionistLayout from '@/components/DigitalReceptionistLayout';
@@ -9,6 +9,8 @@ import DigitalReceptionistLayout from '@/components/DigitalReceptionistLayout';
 const DIGITAL_RECEPTIONIST_HERO_IMAGE_URL = 'https://images.unsplash.com/photo-1684369176170-463e84248b70?auto=format&fit=crop&w=2000&q=72';
 
 const DigitalReceptionistPage = () => {
+  const location = useLocation();
+
   return (
     <DigitalReceptionistLayout>
       <Helmet>
@@ -116,7 +118,13 @@ const DigitalReceptionistPage = () => {
               </div>
             </div>
 
-            <Link to="/signup" className="block w-full">
+            <Link
+              to="/signup"
+              state={{
+                from: `${location.pathname}${location.search}${location.hash}`,
+              }}
+              className="block w-full"
+            >
               <Button className="w-full bg-[#008613] text-white hover:bg-[#ffea00] hover:text-black font-bold text-lg py-6 transition-all">
                 Deploy This Agent
               </Button>

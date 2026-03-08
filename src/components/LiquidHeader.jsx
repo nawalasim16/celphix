@@ -15,14 +15,13 @@ const LiquidHeader = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-[#0a1a0a]/85 backdrop-blur-md border-b border-[#008613] transition-all">
+    <header className="sticky top-0 z-50 bg-[#274e13] border-b border-white/20 transition-all">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-6">
             <Link to="/" className="text-2xl font-bold tracking-tight flex items-baseline">
               <span className="text-[#008613]">CEL</span>
               <span className="text-[#ffea00]">PHIX</span>
-              <span className="text-white text-xs ml-2 font-mono uppercase tracking-widest border border-white/30 px-2 py-1 hidden sm:inline-block">LIQUID</span>
             </Link>
           </div>
 

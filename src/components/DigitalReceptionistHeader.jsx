@@ -14,13 +14,12 @@ const DigitalReceptionistHeader = () => {
             <Link to="/" className="text-2xl font-bold tracking-tight">
               <span className="text-[#008613]">CEL</span>
               <span className="text-[#ffea00]">PHIX</span>
-              <span className="text-[#008613] text-xs ml-2 font-mono uppercase tracking-widest border border-[#008613] px-2 py-1 hidden sm:inline-block">RECEPTIONIST</span>
             </Link>
           </div>
 
           <nav className="hidden md:flex items-center space-x-8">
             <Link to="/digital-receptionist" className="text-white font-medium transition-colors hover:text-[#008613]">
-              Capabilities
+              Home
             </Link>
             <Link to="/digital-receptionist/services" className="text-white font-medium transition-colors hover:text-[#008613]">
               Services
@@ -52,7 +51,7 @@ const DigitalReceptionistHeader = () => {
         {mobileMenuOpen && (
           <div className="md:hidden mt-4 pb-4 border-t border-[#008613]/30">
             <nav className="flex flex-col space-y-4 mt-4">
-              <Link to="/digital-receptionist" className="text-white font-medium hover:text-[#008613]">Capabilities</Link>
+              <Link to="/digital-receptionist" className="text-white font-medium hover:text-[#008613]">Home</Link>
               <Link to="/digital-receptionist/services" className="text-white font-medium hover:text-[#008613]">Services</Link>
               <Link to="/digital-receptionist/pricing" className="text-white font-medium hover:text-[#008613]">Pricing</Link>
               <Link to="/digital-receptionist/documentation" className="text-white font-medium hover:text-[#008613]">Documentation</Link>

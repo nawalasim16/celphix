@@ -59,7 +59,7 @@ const CommandCenterFooter = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-[#008613] pt-6 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-white/60 text-sm mb-4 md:mb-0">© 2025 Celphix. All rights reserved.</p>
+          <p className="text-white/60 text-sm mb-4 md:mb-0">© 2025 Celphix. All Rights Reserved.</p>
           <div className="flex items-center text-[#ffea00] font-mono text-sm">
             <Activity className="w-4 h-4 mr-2 animate-pulse" />
             <span>Network Status: ENCRYPTED</span>

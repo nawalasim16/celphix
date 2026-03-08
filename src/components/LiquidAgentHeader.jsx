@@ -14,7 +14,6 @@ const LiquidAgentHeader = () => {
           <Link to="/" className="text-2xl font-bold tracking-tight flex items-baseline">
             <span className="text-[#008613]">CEL</span>
             <span className="text-[#ffea00]">PHIX</span>
-            <span className="text-[#ffea00] text-xs ml-2 font-thin uppercase tracking-[0.3em]">LIQUID</span>
           </Link>
 
           {/* Desktop Navigation */}

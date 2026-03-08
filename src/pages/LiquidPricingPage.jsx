@@ -5,14 +5,16 @@ import { Link } from 'react-router-dom';
 import LiquidLayout from '@/components/LiquidLayout';
 
 const LiquidPricingPage = () => {
-  const [callsPerMonth, setCallsPerMonth] = useState(500);
+  const [callsPerDay, setCallsPerDay] = useState(120);
   const [avgDuration, setAvgDuration] = useState(3);
 
-  const RATE_PER_MIN = 0.05;
-  const STANDARD_SEAT = 500;
-  
-  const liquidCost = (callsPerMonth * avgDuration * RATE_PER_MIN).toFixed(2);
-  const liquidSaving = Math.max(0, STANDARD_SEAT - parseFloat(liquidCost)).toFixed(2);
+  const CELPHIX_RATE_PER_MIN = 0.05;
+  const COMPETITOR_RATE_PER_MIN = 0.15;
+
+  const totalMinutesPerDay = Number(callsPerDay) * Number(avgDuration);
+  const celphixCostPerDay = totalMinutesPerDay * CELPHIX_RATE_PER_MIN;
+  const competitorCostPerDay = totalMinutesPerDay * COMPETITOR_RATE_PER_MIN;
+  const savingsPerDay = competitorCostPerDay - celphixCostPerDay;
 
   const faqs = [
     { q: "Are there any setup fees?", a: "No. You only pay for the exact minutes consumed by active voice instances." },
@@ -92,14 +94,14 @@ const LiquidPricingPage = () => {
 
           <div className="bg-white p-8 md:p-12 border border-gray-200 shadow-lg">
             <div className="mb-10">
-              <label className="block text-sm font-bold text-[#0a1a0a] mb-4 font-mono">ESTIMATED CALLS PER MONTH: <span className="text-[#008613]">{callsPerMonth}</span></label>
+              <label className="block text-sm font-bold text-[#0a1a0a] mb-4 font-mono">NUMBER OF CALLS PER DAY: <span className="text-[#008613]">{callsPerDay}</span></label>
               <input 
                 type="range" 
-                min="50" 
-                max="10000" 
-                step="50"
-                value={callsPerMonth} 
-                onChange={(e) => setCallsPerMonth(e.target.value)}
+                min="10" 
+                max="2000" 
+                step="10"
+                value={callsPerDay} 
+                onChange={(e) => setCallsPerDay(e.target.value)}
                 className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-[#008613]"
               />
             </div>
@@ -117,16 +119,16 @@ const LiquidPricingPage = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 bg-[#0a1a0a] p-6 rounded-lg text-white font-mono">
               <div className="text-center md:text-left">
-                <div className="text-xs text-gray-500 mb-1">Standard Seat License Cost</div>
-                <div className="text-2xl font-bold text-gray-300 line-through">${STANDARD_SEAT}</div>
+                <div className="text-xs text-gray-500 mb-1">COMPETITOR COST / DAY</div>
+                <div className="text-2xl font-bold text-gray-300">${competitorCostPerDay.toFixed(2)}</div>
               </div>
               <div className="text-center md:border-l md:border-r border-gray-700 md:px-4">
-                <div className="text-xs text-[#008613] mb-1 font-bold tracking-wider">LIQUID USAGE COST</div>
-                <div className="text-3xl font-black text-white">${liquidCost}</div>
+                <div className="text-xs text-[#008613] mb-1 font-bold tracking-wider">CELPHIX COST / DAY</div>
+                <div className="text-3xl font-black text-white">${celphixCostPerDay.toFixed(2)}</div>
               </div>
               <div className="text-center md:text-right">
-                <div className="text-xs text-[#ffea00] mb-1 font-bold tracking-wider">YOUR SAVINGS</div>
-                <div className="text-3xl font-black text-[#ffea00]">${liquidSaving}</div>
+                <div className="text-xs text-[#ffea00] mb-1 font-bold tracking-wider">SAVINGS / DAY</div>
+                <div className="text-3xl font-black text-[#ffea00]">${savingsPerDay.toFixed(2)}</div>
               </div>
             </div>
           </div>

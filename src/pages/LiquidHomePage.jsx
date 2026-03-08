@@ -44,15 +44,15 @@ const LiquidHomePage = () => {
       <section className="py-24 px-4 bg-gray-50 border-y border-gray-200">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-black text-[#0a1a0a] mb-4 uppercase tracking-tight">The Liquid Core</h2>
-            <p className="text-lg text-gray-600 font-mono">Infrastructure designed for fluid scalability.</p>
+            <h2 className="text-4xl font-black text-[#274e13] mb-4 uppercase tracking-tight">The Liquid Core</h2>
+            <p className="text-lg text-gray-600 font-sans">Infrastructure designed for fluid scalability.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white p-10 border border-gray-200 shadow-xl hover:border-[#008613] transition-colors relative overflow-hidden group">
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-[#008613]/10 to-transparent rounded-bl-full -mr-10 -mt-10 transition-transform group-hover:scale-110" />
               <CloudLightning className="w-12 h-12 text-[#008613] mb-6 relative z-10" />
-              <h3 className="text-2xl font-bold text-[#0a1a0a] mb-4 relative z-10">On-Demand Instance Summoning</h3>
+              <h3 className="text-2xl font-bold text-[#274e13] mb-4 relative z-10">On-Demand Instance Summoning</h3>
               <p className="text-gray-600 leading-relaxed relative z-10">
                 Trigger 1 or 10,000 agents simultaneously via a single POST request. The Liquid network dynamically provisions compute clusters on the edge, ensuring sub-700ms latency regardless of load.
               </p>
@@ -61,7 +61,7 @@ const LiquidHomePage = () => {
             <div className="bg-white p-10 border border-gray-200 shadow-xl hover:border-[#008613] transition-colors relative overflow-hidden group">
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-[#008613]/10 to-transparent rounded-bl-full -mr-10 -mt-10 transition-transform group-hover:scale-110" />
               <Cpu className="w-12 h-12 text-[#008613] mb-6 relative z-10" />
-              <h3 className="text-2xl font-bold text-[#0a1a0a] mb-4 relative z-10">Neural Context Injection</h3>
+              <h3 className="text-2xl font-bold text-[#274e13] mb-4 relative z-10">Neural Context Injection</h3>
               <p className="text-gray-600 leading-relaxed relative z-10">
                 Inject custom knowledge bases and real-time variables directly into the agent's prompt during initialization. Agents adapt their reasoning instantly based on caller CRM data.
               </p>
@@ -70,7 +70,7 @@ const LiquidHomePage = () => {
             <div className="bg-white p-10 border border-gray-200 shadow-xl hover:border-[#008613] transition-colors relative overflow-hidden group">
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-[#008613]/10 to-transparent rounded-bl-full -mr-10 -mt-10 transition-transform group-hover:scale-110" />
               <Webhook className="w-12 h-12 text-[#008613] mb-6 relative z-10" />
-              <h3 className="text-2xl font-bold text-[#0a1a0a] mb-4 relative z-10">Event-Driven Automation</h3>
+              <h3 className="text-2xl font-bold text-[#274e13] mb-4 relative z-10">Event-Driven Automation</h3>
               <p className="text-gray-600 leading-relaxed relative z-10">
                 Native webhook firing mid-conversation or post-call. Trigger Zapier flows, update PostgreSQL databases, or send Slack alerts perfectly synced with voice interactions.
               </p>
@@ -83,8 +83,8 @@ const LiquidHomePage = () => {
       <section className="py-24 px-4 bg-white">
         <div className="container mx-auto max-w-6xl">
           <div className="mb-16">
-            <h2 className="text-4xl font-black text-[#0a1a0a] mb-4 uppercase tracking-tight">Execution Library</h2>
-            <p className="text-lg text-gray-600 font-mono">Deploy modular capabilities instantly.</p>
+            <h2 className="text-4xl font-black text-[#274e13] mb-4 uppercase tracking-tight">Execution Library</h2>
+            <p className="text-lg text-gray-600 font-sans">Deploy modular capabilities instantly.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -127,10 +127,10 @@ const LiquidHomePage = () => {
       <section className="py-24 px-4 bg-gray-50 border-t border-gray-200">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-black text-[#0a1a0a] uppercase tracking-tight">Standard Operating Metrics</h2>
+            <h2 className="text-3xl font-black text-[#274e13] uppercase tracking-tight">Standard Operating Metrics</h2>
           </div>
 
-          <div className="bg-white border border-gray-200 shadow-xl overflow-hidden font-mono">
+          <div className="bg-white border border-gray-200 shadow-xl overflow-hidden font-sans">
             <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-gray-200">
               <div className="p-6 hover:bg-gray-50 transition-colors">
                 <div className="text-sm text-gray-500 mb-1">TRTL Latency</div>
@@ -160,7 +160,7 @@ const LiquidHomePage = () => {
           <h2 className="text-4xl md:text-5xl font-black text-white mb-8 uppercase tracking-tight">
             Deploy Your First Instance in 60 Seconds
           </h2>
-          <p className="text-xl text-gray-400 font-mono mb-12">
+          <p className="text-xl text-gray-400 font-sans mb-12">
             No credit card required for sandbox testing.
           </p>
           <Link to="/signup">

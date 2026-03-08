@@ -5,7 +5,7 @@ import { Instagram, Linkedin, Twitter } from 'lucide-react';
 
 const LiquidFooter = () => {
   return (
-    <footer className="bg-[#008613] border-t border-[#0a1a0a] text-white font-mono pt-16 pb-8 px-4 relative z-50">
+    <footer className="bg-[#274e13] border-t border-white/20 text-white font-mono pt-16 pb-8 px-4 relative z-50">
       <div className="container mx-auto max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           {/* Column 1 */}
@@ -63,7 +63,7 @@ const LiquidFooter = () => {
         {/* Bottom Legal Bar */}
         <div className="border-t border-[#0a1a0a]/30 pt-8 flex flex-col md:flex-row justify-between items-center text-xs">
           <p className="text-white/80 mb-4 md:mb-0">
-            © 2025 Celphix Liquid. All Rights Reserved.
+            © 2025 Celphix. All Rights Reserved.
           </p>
           <div className="flex space-x-6">
             <a href="#" className="text-white/80 hover:text-white transition-colors">Privacy Policy</a>

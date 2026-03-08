@@ -1,8 +1,13 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import DigitalReceptionistLayout from '@/components/DigitalReceptionistLayout';
+import { Link, useLocation } from 'react-router-dom';
+import { CheckCircle2 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const DigitalReceptionistPricingPage = () => {
+  const location = useLocation();
+
   const comparisonData = [
     {
       category: "Availability & Reliability",
@@ -47,7 +52,7 @@ const DigitalReceptionistPricingPage = () => {
     {
       category: "Cost & Scalability",
       features: [
-        { name: "Base Salary/Cost", human: "$35,000 - $45,000 / year", ai: "$1,188 / year ($99/mo)" },
+        { name: "Base Salary/Cost", human: "$35,000 - $45,000 / year", ai: "$1,788 / year ($149/mo)" },
         { name: "Benefits & Overhead", human: "~30% of base salary", ai: "$0" },
         { name: "Onboarding Time", human: "2-4 Weeks", ai: "< 10 Minutes" },
         { name: "Scaling Up Volume", human: "Requires hiring more staff", ai: "Scales automatically instantly" },
@@ -68,6 +73,52 @@ const DigitalReceptionistPricingPage = () => {
           <div className="text-center mb-16">
             <h1 className="text-5xl font-black text-black mb-6 uppercase tracking-tight">Comparative Hospitality Audit</h1>
             <p className="text-xl text-gray-700">A rigorous head-to-head analysis of front-desk operations.</p>
+          </div>
+
+          <div className="bg-white border-4 border-[#008613] rounded-2xl p-10 md:p-12 shadow-2xl relative overflow-hidden mb-16">
+            <div className="absolute top-4 right-4 bg-[#ffea00] text-black text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider flex items-center shadow-sm">
+              <span className="w-2 h-2 bg-red-500 rounded-full mr-2 animate-pulse"></span>
+              Live Deploy
+            </div>
+
+            <h2 className="text-3xl md:text-4xl font-bold text-[#008613] mb-8 text-center">Digital Receptionist Pricing</h2>
+
+            <div className="text-center mb-10">
+              <div className="text-gray-400 text-2xl line-through mb-2">$199 / Month</div>
+              <div className="text-6xl font-black text-[#008613] mb-2">$149</div>
+              <div className="text-gray-600">per month</div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 mb-10">
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="w-6 h-6 text-[#008613] flex-shrink-0 mt-0.5" />
+                <span className="text-gray-700"><strong>Unlimited Inbound Calls:</strong> No per-minute charges</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="w-6 h-6 text-[#008613] flex-shrink-0 mt-0.5" />
+                <span className="text-gray-700"><strong>Calendar Integration:</strong> Google, Outlook, Calendly sync</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="w-6 h-6 text-[#008613] flex-shrink-0 mt-0.5" />
+                <span className="text-gray-700"><strong>CRM Auto-Logging:</strong> Structured records after every call</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="w-6 h-6 text-[#008613] flex-shrink-0 mt-0.5" />
+                <span className="text-gray-700"><strong>24/7 Uptime:</strong> Always-on front-desk coverage</span>
+              </div>
+            </div>
+
+            <Link
+              to="/signup"
+              state={{
+                from: `${location.pathname}${location.search}${location.hash}`,
+              }}
+              className="block w-full"
+            >
+              <Button className="w-full bg-[#008613] text-white hover:bg-[#ffea00] hover:text-black font-bold text-lg py-6 transition-all">
+                Deploy My Receptionist
+              </Button>
+            </Link>
           </div>
 
           <div className="bg-white shadow-2xl rounded-2xl overflow-hidden border border-gray-200">
