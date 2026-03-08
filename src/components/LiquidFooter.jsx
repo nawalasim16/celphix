@@ -61,15 +61,10 @@ const LiquidFooter = () => {
         </div>
 
         {/* Bottom Legal Bar */}
-        <div className="border-t border-[#0a1a0a]/30 pt-8 flex flex-col md:flex-row justify-between items-center text-xs">
-          <p className="text-white/80 mb-4 md:mb-0">
+        <div className="border-t border-[#0a1a0a]/30 pt-8 text-xs">
+          <p className="text-white/80 text-center">
             © 2025 Celphix. All Rights Reserved.
           </p>
-          <div className="flex space-x-6">
-            <a href="#" className="text-white/80 hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="text-white/80 hover:text-white transition-colors">SOC2 Whitepaper</a>
-            <a href="#" className="text-white/80 hover:text-white transition-colors">Terms of Service</a>
-          </div>
         </div>
       </div>
     </footer>
